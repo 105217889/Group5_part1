@@ -1,8 +1,9 @@
 /* --- Global Styles --- */
 /* Applies to all html pages to maintain consistency */
-:root { /*Color code taken from https://htmlcolorcodes.com*/
-    --primary-color: #764AF1; 
-    --secondary-color: #9772FB;
+/*All Color code taken from https://htmlcolorcodes.com*/
+:root {
+    --primary-color: #57a8f5; 
+    --secondary-color: #24d1d9;
     --dark-bg: #1E1E1E;
     --light-text: #F0F0F0;
     --dark-text: #333333;
@@ -109,7 +110,7 @@ footer {
 
 .cta-button {
     display: inline-block;
-    background-color: var(--primary-color);
+    background-color: #3367D6;
     color: white;
     padding: 12px 25px;
     border-radius: 5px;
@@ -134,7 +135,7 @@ footer {
 
 .apply-button {
     display: inline-block;
-    background-color: var(--secondary-color);
+    background-color: #3367D6;
     color: white;
     padding: 8px 15px;
     border-radius: 5px;
