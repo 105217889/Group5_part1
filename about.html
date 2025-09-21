@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn about PixelForge Studios—our mission, values, and culture.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us — PixelForge Studios</title>
-  <link rel="stylesheet" href="Styles/styles.css">
+  <link rel="stylesheet" href="Styles/styles.css" />
 </head>
 <body id="about-page">
-  <!-- Shared header -->
+  <!-- Shared header (same as jobs.html) -->
   <header>
     <nav>
       <div class="logo-title-group">
         <a href="index.html" class="logo-link" aria-label="Go to the homepage">
-          <img src="image/logo.png" alt="PixelForge Studios Logo" id="logo">
+          <img src="image/logo.png" alt="PixelForge Studios Logo" id="logo" />
         </a>
         <a href="index.html" class="header-link"><h1>PixelForge Studios</h1></a>
       </div>
@@ -27,51 +26,110 @@
   </header>
 
   <main>
-    <!-- Hero banner with overlay -->
+    <!-- HERO -->
     <section class="about-hero">
-      <h2>Our Story</h2>
-      <p>PixelForge Studios is more than a workplace—it’s a forge where creativity and technology meet. We build memorable art, games, and experiences that connect players worldwide.</p>
+      <div class="about-hero__content">
+        <h2>We craft memorable worlds, one pixel at a time.</h2>
+        <p>Small, senior team. High ownership. Player-first craft. That’s our studio DNA.</p>
+      </div>
     </section>
 
-    <!-- Grid values -->
+    <!-- STATS STRIP -->
+    <section class="about-stats" aria-label="Studio stats">
+      <div class="stat"><span class="stat__num">7</span><span class="stat__label">Years</span></div>
+      <div class="stat"><span class="stat__num">4</span><span class="stat__label">Shipped Titles</span></div>
+      <div class="stat"><span class="stat__num">20M+</span><span class="stat__label">Players</span></div>
+      <div class="stat"><span class="stat__num">100%</span><span class="stat__label">Remote Friendly</span></div>
+    </section>
+
+    <!-- VALUES GRID -->
     <section class="about-values">
       <h2>Our Values</h2>
       <div class="values-grid">
         <article class="value-card">
+          <div class="value-card__icon" aria-hidden="true">🎮</div>
           <h3>Player First</h3>
-          <p>We design every detail with players in mind, ensuring fun and accessibility for all.</p>
+          <p>Decisions follow playtests and accessibility checks.</p>
         </article>
         <article class="value-card">
-          <h3>Innovation</h3>
-          <p>We experiment boldly and embrace new tools, but always keep craft at the core.</p>
+          <div class="value-card__icon" aria-hidden="true">🛠️</div>
+          <h3>Craft</h3>
+          <p>Readable art. Maintainable code. Sustainable scope.</p>
         </article>
         <article class="value-card">
+          <div class="value-card__icon" aria-hidden="true">🤝</div>
           <h3>Collaboration</h3>
-          <p>We thrive as a team, learning from each other and growing together.</p>
+          <p>Kind candor and clear written decisions.</p>
         </article>
       </div>
     </section>
 
-    <!-- Culture layout -->
-    <section class="about-culture">
-      <div class="culture-main">
-        <h2>Our Culture</h2>
-        <p>We keep our team small and focused, so everyone has real ownership. Feedback is direct but respectful, and playtesting drives decisions more than opinions.</p>
-        <ul>
-          <li>Weekly creative jams</li>
-          <li>Transparent project planning</li>
-          <li>Support for continuous learning</li>
-        </ul>
+    <!-- TIMELINE + ASIDE -->
+    <section class="about-history">
+      <div class="history">
+        <h2>Our Story</h2>
+        <ol class="timeline">
+          <li>
+            <time>2018</time>
+            <p>PixelForge founded to blend retro aesthetics with modern engines.</p>
+          </li>
+          <li>
+            <time>2020</time>
+            <p>First indie hit launches, community surpasses one million players.</p>
+          </li>
+          <li>
+            <time>2023</time>
+            <p>Scaled to multi-platform releases with a fully remote team.</p>
+          </li>
+          <li>
+            <time>Now</time>
+            <p>Building our most ambitious title yet and hiring across the studio.</p>
+          </li>
+        </ol>
       </div>
+
       <aside class="culture-aside">
         <h3>Benefits</h3>
         <ul>
           <li>Health cover + paid leave</li>
           <li>Flexible remote options</li>
           <li>Learning & tools budget</li>
-          <li>Team retreats and events</li>
+          <li>Team jams and retreats</li>
         </ul>
       </aside>
+    </section>
+
+    <!-- TEAM GRID -->
+    <section class="about-team">
+      <h2>Meet the Team</h2>
+      <div class="team-grid">
+        <article class="teammate">
+          <div class="avatar" aria-hidden="true"></div>
+          <h4>Rin Takahashi</h4>
+          <p class="role">Art Director</p>
+        </article>
+        <article class="teammate">
+          <div class="avatar" aria-hidden="true"></div>
+          <h4>Alex Morgan</h4>
+          <p class="role">Lead Engineer</p>
+        </article>
+        <article class="teammate">
+          <div class="avatar" aria-hidden="true"></div>
+          <h4>Sana Patel</h4>
+          <p class="role">Producer</p>
+        </article>
+        <article class="teammate">
+          <div class="avatar" aria-hidden="true"></div>
+          <h4>Diego Flores</h4>
+          <p class="role">Composer</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="about-cta">
+      <h2>Want to build with us?</h2>
+      <a class="cta-button" href="jobs.html">View Open Positions</a>
     </section>
   </main>
 
