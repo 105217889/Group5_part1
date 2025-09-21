@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to PixelForge Studios, a leading game development company.">
+    <meta name="keywords" content="Game Development, Tech Jobs, Programming, Art, Design">
+    <meta name="author" content="PixelForge Studios">
+    <title>Applying to PixelForge Studios</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+</head>
+<body>
+     <header>
+        <nav>
+            <a href="index.html" class="logo-link">
+                <img src="image/logo.png" alt="PixelForge Studios Logo" id="logo">
+            </a>
+            <h1>PixelForge Studios</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Careers</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+<div class="main-container">
+    <div class="sidebar1"></div>
+   
+<div class="apply-center">
+<form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+    <h2 style="font-size: 32px;">Job Applications</h2>
+
+    <div>
+        <label for="referencenumber">Reference Number</label> 
+        <input type="text" id="referencenumber" name="referencenumber" pattern="^[A-Za-z0-9]{5}$" required maxlength="5" placeholder="e.g CF34V">
+    </div>
+
+        <div>
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" pattern="^[a-zA-Z]+$" required maxlength="20">
+        </div>
+            <div> 
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" pattern="^[a-zA-Z]+$" required maxlength="20">
+        </div>
+        <div> 
+            <label for="dateofbirth">Date of birth</label>
+            <input type="date" id="dateofbirth" name="dateofbirth" required> 
+        </div>
+            
+        
+    
+    <fieldset>
+        <legend><h3>Gender</h3></legend>
+        <p>
+            <label for="g1">Male</label>
+            <input type="radio" name="gender" id="g1" value="male" required>
+            <label for="g2">Female</label>
+            <input type="radio" name="gender" id="g2" value="female" required>
+             <label for="g3">Prefer not to say</label>
+            <input type="radio" name="gender" id="g3" value="prefer not to say" required>
+        </p>
+    </fieldset>
+    <h3>Address</h3>   
+    <div> 
+            <label for="street">Street Address</label>
+            <input type="text" id="street" name="street" required maxlength="40">
+        </div>
+      
+           
+        
+            <div> 
+                <label for="sub">Suburb/Town</label>
+            <input type="text" id="sub" name="sub" required maxlength="40">
+            </div>
+            <div> 
+            <label for="state">State</label>
+            <select name="state" id="state" required>
+             <option value="">Please Choose</option>
+                <option value="VIC">VIC</option> 
+             <option value="NSW">NSW</option>
+             <option value="QLD">QLD</option>
+             <option value="NT">NT</option>
+             <option value="WA">WA</option>
+             <option value="SA">SA</option>
+             <option value="TAS">TAS</option>
+             <option value="ACT">ACT</option>  
+             </select>
+            </div> 
+          <div>
+             <label for="postcode">Postcode</label>
+            <input type="text" id="postcode" name="postcode" pattern="^[0-9]{4}$" required maxlength="4">
+        </div>
+   
+     <h3>Contact Info</h3>
+            <div> 
+                 <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" pattern="^[0-9]{8,12}$" required maxlength="12">
+            </div>
+            <fieldset>
+                <legend><h3>Skill list</h3></legend>
+                <div>
+                    <label>
+                        <input type="checkbox" name="skills[]" value="cplus">C++
+                    </label>
+                    <label>
+                        <input type="checkbox" name="skills[]" value="csharp">C#
+                    </label>
+                     <label>
+                        <input type="checkbox" name="skills[]" value="unity">Unity
+                    </label>
+                     <label>
+                        <input type="checkbox" name="skills[]" value="unreal">Unreal
+                    </label>
+                     <label>
+                        <input type="checkbox" name="skills[]" value="blender">Blender
+                    </label>
+                     <label>
+                        <input type="checkbox" name="skills[]" value="maya">Maya
+                    </label>
+                     <label>
+                        <input type="checkbox" name="skills[]" value="otherskill">Other skills
+                    </label>
+                </div>
+            </fieldset>
+            <div>
+            <label for="otherskills">Other skills</label>
+            <textarea id="otherskills" name="otherskills" rows="4" cols="50"></textarea>
+             </div>
+  
+<button type="submit" class="apply-button">Submit Application</button>
+<button type="reset" class="apply-button">Reset Application</button>
+</form>
+</div>
+<div class="sidebar2"></div>
+</div>
+<footer>
+        <p>Contact us at <a href="mailto:info@pixelforgestudios.com">info@pixelforgestudios.com</a></p>
+        <p>Follow our journey on <a href="https://chanresmeysamrith321.atlassian.net/jira/software/projects/G5/code?atlOrigin=eyJpIjoiNzAwMjdhNDhiNWE0NDgxMzk4ZDFiYzlhYWNiMTZmZGEiLCJwIjoiaiJ9" target="_blank">Jira</a> & <a href="https://github.com/105217889/Group5_part1" target="_blank">GitHub</a></p>
+        <p>&copy; 2025 PixelForge Studios. All rights reserved.</p>
+    </footer>
+</body>
+ 
+</html>
