@@ -305,3 +305,34 @@ aside {
   background: linear-gradient(90deg, rgba(51,103,214,.25), rgba(36,209,217,.25));
   border: 1px solid var(--border-color); border-radius: 12px;
 }
+/* --- Benefits compact (fixed width issue) --- */
+.benefits-box{
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;              /* ensure full aside width */
+  box-sizing: border-box;   /* include padding in width calc */
+}
+
+.benefits-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr; /* single column by default */
+}
+
+.benefits-list li{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  word-break: break-word;    /* prevent overflow */
+}
+
+@media (min-width:768px){
+  .benefits-list{
+    grid-template-columns: 1fr 1fr; /* two columns only when there is space */
+  }
+}
