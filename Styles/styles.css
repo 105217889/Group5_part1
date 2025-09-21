@@ -195,3 +195,38 @@ aside {
         font-size: 2em;
     }
 }
+/* --- About layout polish ---
+   Purpose: consistent spacing, aligned grids, clean two-column on desktop
+   Pages: about.html
+*/
+
+/* Section rhythm */
+#about-page main > section{ margin-bottom:32px }
+
+/* Hero: tighter and centered copy */
+#about-page .about-hero{ padding:64px 24px; margin:16px 0 28px }
+#about-page .about-hero h2{ margin:0 0 8px }
+
+/* Stats: 2 → 4 columns, equal heights */
+.about-stats{ display:grid; gap:16px; grid-template-columns:repeat(2,1fr) }
+@media (min-width:768px){ .about-stats{ grid-template-columns:repeat(4,1fr) } }
+.stat{ display:flex; flex-direction:column; justify-content:center; min-height:84px }
+
+/* Values: equal card heights and nicer gap */
+.values-grid{ display:grid; gap:18px }
+@media (min-width:768px){ .values-grid{ grid-template-columns:repeat(3,1fr) } }
+.value-card{ display:flex; flex-direction:column; justify-content:flex-start; min-height:160px }
+
+/* History + aside: two-column on tablet+, stacked on mobile */
+.about-history{ display:grid; gap:20px }
+@media (min-width:900px){
+  .about-history{ grid-template-columns:2fr 1fr; align-items:start }
+}
+
+/* Team: tidy grid and consistent card sizing */
+.team-grid{ display:grid; gap:16px; grid-template-columns:repeat(2,1fr) }
+@media (min-width:768px){ .team-grid{ grid-template-columns:repeat(4,1fr) } }
+.teammate{ display:flex; flex-direction:column; align-items:center; min-height:180px }
+
+/* CTA: reduce visual weight and align with grid rhythm */
+.about-cta{ padding:28px 20px; margin-top:8px }
