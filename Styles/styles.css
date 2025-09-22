@@ -1,9 +1,8 @@
 /* --- Global Styles --- */
 /* Applies to all html pages to maintain consistency */
-/*All Color code taken from https://htmlcolorcodes.com*/
-:root {
-    --primary-color: #57a8f5; 
-    --secondary-color: #24d1d9;
+:root { /*Color code taken from https://htmlcolorcodes.com*/
+    --primary-color: #764AF1; 
+    --secondary-color: #9772FB;
     --dark-bg: #1E1E1E;
     --light-text: #F0F0F0;
     --dark-text: #333333;
@@ -110,7 +109,7 @@ footer {
 
 .cta-button {
     display: inline-block;
-    background-color: #3367D6;
+    background-color: var(--primary-color);
     color: white;
     padding: 12px 25px;
     border-radius: 5px;
@@ -135,7 +134,7 @@ footer {
 
 .apply-button {
     display: inline-block;
-    background-color: #3367D6;
+    background-color: var(--secondary-color);
     color: white;
     padding: 8px 15px;
     border-radius: 5px;
@@ -177,4 +176,35 @@ aside {
     nav h1 {
         font-size: 2em;
     }
+}
+
+
+
+ 
+.apply-center{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+}
+.main-container {
+    display: flex;
+    min-height: 100vh;
+}
+.sidebar1 {
+    width: 30%;
+    background-color:var(--card-bg); 
+    border-right: 2px solid #333; 
+}
+.sidebar2 {
+    width: 30%;
+    background-color:var(--card-bg); 
+    border-left: 2px solid #333; 
+}
+.apply-center form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    max-width: 300px;
 }
