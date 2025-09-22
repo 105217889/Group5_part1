@@ -208,3 +208,62 @@ aside {
     margin-bottom: 15px;
     max-width: 300px;
 }
+/* --- About page --- */
+#about-page main > section { margin-bottom: 32px; }
+
+/* Hero */
+#about-page .about-hero {
+  border-radius: 12px;
+  background: linear-gradient(rgba(30,30,30,.85), rgba(30,30,30,.85)),
+              url('../image/Background.png') center/cover no-repeat;
+  padding: 64px 24px;
+  text-align: center;
+}
+#about-page .about-hero__content { max-width: 820px; margin: 0 auto; }
+
+/* Profile + Contributions */
+.team-profile, .member-contributions, .group-photo, .fun-facts {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+dl { margin: 0; }
+dt { font-weight: bold; color: var(--primary-color); margin-top: 12px; }
+dd { margin-left: 20px; margin-bottom: 8px; }
+
+/* Group photo */
+.group-photo figure { text-align: center; }
+.group-photo img { max-width: 100%; border-radius: 8px; }
+.group-photo figcaption { font-size: .9rem; margin-top: 8px; color: var(--light-text); }
+
+/* Fun facts table */
+.fun-facts table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+.fun-facts th, .fun-facts td {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  text-align: center;
+}
+.fun-facts th {
+  background: var(--primary-color);
+  color: #fff;
+}
+.fun-facts caption {
+  caption-side: top;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* CTA */
+.about-cta {
+  padding: 28px 20px;
+  text-align: center;
+  background: linear-gradient(90deg, rgba(51,103,214,.25), rgba(36,209,217,.25));
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
