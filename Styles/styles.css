@@ -186,11 +186,15 @@ aside {
     display: flex;
     justify-content: center;
     padding: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    border-color: var(--primary-color);
 
 }
 .main-container {
     display: flex;
-    min-height: 100vh;
+    
+    
 }
 .sidebar1 {
     width: 30%;
@@ -207,6 +211,68 @@ aside {
     flex-direction: column;
     margin-bottom: 15px;
     max-width: 300px;
+    margin-bottom: 20px;
+}
+.apply-center input, .apply-center select {
+    padding: 16px 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--light-text);
+    width: 100%;
+    max-width: 300px;
+    min-height: 10px;
+}
+.apply-center select option {
+    background-color: #2C2C2C;
+    color: #F0F0F0;
+}
+.apply-center input:hover, .apply-center select:hover, .apply-center textarea:hover {
+    border-color: var(--primary-color);
+}
+.apply-center input:focus,
+.apply-center select:focus{
+    border-color: var(--primary-color);
+background-color: rgba(118, 74, 241, 0.1);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(118, 74, 241, 0.2);}
+.apply-center input[type="radio"], .apply-center input[type="checkbox"] {
+    width: auto;
+    
+    padding: 0;
+    margin-right: 8px;
+}
+.apply-fieldset{
+     border-color: var(--primary-color);
+     width: 325px;
+}
+.apply-center label{
+    font-size: 15px;            
+    margin-bottom: 6px;
+    color: var(--light-text);
+}
+
+     
+
+.reset-but {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 15px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+     
+}
+.submit-but {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 15px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+     
 }
 /* --- About page --- */
 #about-page main > section { margin-bottom: 32px; }
