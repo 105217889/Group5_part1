@@ -10,6 +10,7 @@
     --card-bg: #2C2C2C;
     --border-color: #444444;
 }
+
 .logo-title-group {
     display: flex;
     align-items: center;
@@ -31,6 +32,7 @@ h1, h2, h3, h4 {
 }
 
 a {
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -157,7 +159,6 @@ aside {
     box-sizing: border-box; 
 }
 
-
 .jobs-layout {
     display: flex;
     gap: 20px;
@@ -240,7 +241,7 @@ background-color: rgba(118, 74, 241, 0.1);
 
 .reset-but {
     display: inline-block;
-    background-color: var(--secondary-color);
+    background-color: #3367D6;
     color: white;
     padding: 15px 15px;
     border-radius: 5px;
@@ -249,7 +250,7 @@ background-color: rgba(118, 74, 241, 0.1);
 }
 .submit-but {
     display: inline-block;
-    background-color: var(--secondary-color);
+    background-color: #3367D6;
     color: white;
     padding: 15px 15px;
     border-radius: 5px;
@@ -299,7 +300,7 @@ dd { margin-left: 20px; margin-bottom: 8px; }
   text-align: center;
 }
 .fun-facts th {
-  background: var(--primary-color);
+  background: #3367D6;
   color: #fff;
 }
 .fun-facts caption {
