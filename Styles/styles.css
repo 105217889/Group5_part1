@@ -1,9 +1,8 @@
 /* --- Global Styles --- */
 /* Applies to all html pages to maintain consistency */
-/*All Color code taken from https://htmlcolorcodes.com*/
-:root {
-    --primary-color: #57a8f5; 
-    --secondary-color: #24d1d9;
+:root { /*Color code taken from https://htmlcolorcodes.com*/
+    --primary-color: #764AF1; 
+    --secondary-color: #9772FB;
     --dark-bg: #1E1E1E;
     --light-text: #F0F0F0;
     --dark-text: #333333;
@@ -16,15 +15,20 @@
     align-items: center;
 }
 
+nav h1 {
+    flex-grow: 0; 
+}
+
+.header-link:hover {
+    text-decoration: none;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     margin: 0;
     background-color: var(--dark-bg);
     color: var(--light-text);
     line-height: 1.6;
-    min-height: 100vh; 
-    display: flex;
-    flex-direction: column;
 }
 
 h1, h2, h3, h4 {
@@ -39,7 +43,6 @@ main {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    flex-grow: 1;
 }
 
 /* --- Header and Navigation (Shared for all) --- */
@@ -114,7 +117,7 @@ footer {
 
 .cta-button {
     display: inline-block;
-    background-color: #3367D6;
+    background-color: var(--primary-color);
     color: white;
     padding: 12px 25px;
     border-radius: 5px;
@@ -139,7 +142,7 @@ footer {
 
 .apply-button {
     display: inline-block;
-    background-color: #3367D6;
+    background-color: var(--secondary-color);
     color: white;
     padding: 8px 15px;
     border-radius: 5px;
@@ -163,6 +166,22 @@ aside {
     gap: 20px;
 }
 
-.job-listings {
-    flex: 3; 
+    .job-listings {
+        flex: 3; 
+    }
+    
+    /* <aside> width requirement for larger screens */
+    aside {
+        flex: 1; 
+        float: right; 
+        width: 25%;
+        box-sizing: border-box; 
+    }
+}
+
+/* For larger desktops (minor adjustments) */
+@media (min-width: 1024px) {
+    nav h1 {
+        font-size: 2em;
+    }
 }
