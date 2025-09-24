@@ -1,26 +1,18 @@
 /* --- Global Styles --- */
 /* Applies to all html pages to maintain consistency */
-:root { /*Color code taken from https://htmlcolorcodes.com*/
-    --primary-color: #764AF1; 
-    --secondary-color: #9772FB;
+/*All Color code taken from https://htmlcolorcodes.com*/
+:root {
+    --primary-color: #57a8f5; 
+    --secondary-color: #24d1d9;
     --dark-bg: #1E1E1E;
     --light-text: #F0F0F0;
     --dark-text: #333333;
     --card-bg: #2C2C2C;
     --border-color: #444444;
 }
-
 .logo-title-group {
     display: flex;
     align-items: center;
-}
-
-nav h1 {
-    flex-grow: 0; 
-}
-
-.header-link:hover {
-    text-decoration: none;
 }
 
 body {
@@ -29,6 +21,9 @@ body {
     background-color: var(--dark-bg);
     color: var(--light-text);
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2, h3, h4 {
@@ -43,6 +38,7 @@ main {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    flex-grow: 1;
 }
 
 /* --- Header and Navigation (Shared for all) --- */
@@ -66,7 +62,7 @@ nav {
 
 nav h1 {
     font-size: 1.5em;
-    margin: 0px 10px;
+    margin: 0 10px;
     flex-grow: 1;
 }
 
@@ -117,7 +113,7 @@ footer {
 
 .cta-button {
     display: inline-block;
-    background-color: var(--primary-color);
+    background-color: #3367D6;
     color: white;
     padding: 12px 25px;
     border-radius: 5px;
@@ -142,7 +138,7 @@ footer {
 
 .apply-button {
     display: inline-block;
-    background-color: var(--secondary-color);
+    background-color: #3367D6;
     color: white;
     padding: 8px 15px;
     border-radius: 5px;
@@ -161,27 +157,162 @@ aside {
     box-sizing: border-box; 
 }
 
+
 .jobs-layout {
     display: flex;
     gap: 20px;
 }
 
-    .job-listings {
-        flex: 3; 
-    }
-    
-    /* <aside> width requirement for larger screens */
-    aside {
-        flex: 1; 
-        float: right; 
-        width: 25%;
-        box-sizing: border-box; 
-    }
+.job-listings {
+    flex: 3; 
 }
 
-/* For larger desktops (minor adjustments) */
-@media (min-width: 1024px) {
-    nav h1 {
-        font-size: 2em;
-    }
+/* apply.html specific */
+.apply-center{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    border-color: var(--primary-color);
+
+}
+.main-container {
+    display: flex; 
+}
+.sidebar1 {
+    width: 30%;
+    background-color:var(--card-bg); 
+    border-right: 2px solid #333; 
+}
+.sidebar2 {
+    width: 30%;
+    background-color:var(--card-bg); 
+    border-left: 2px solid #333; 
+}
+.apply-center form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+.apply-center input, .apply-center select {
+    padding: 16px 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--light-text);
+    width: 100%;
+    max-width: 300px;
+    min-height: 10px;
+}
+.apply-center select option {
+    background-color: #2C2C2C;
+    color: #F0F0F0;
+}
+.apply-center input:hover, .apply-center select:hover, .apply-center textarea:hover {
+    border-color: var(--primary-color);
+}
+.apply-center input:focus,
+.apply-center select:focus{
+    border-color: var(--primary-color);
+background-color: rgba(118, 74, 241, 0.1);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(118, 74, 241, 0.2);}
+.apply-center input[type="radio"], .apply-center input[type="checkbox"] {
+    width: auto;
+    padding: 0;
+    margin-right: 8px;
+}
+.apply-fieldset{
+     border-color: var(--primary-color);
+     width: 325px;
+}
+.apply-center label{
+    font-size: 15px;            
+    margin-bottom: 6px;
+    color: var(--light-text);
+}
+
+.reset-but {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 15px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+     
+}
+.submit-but {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 15px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+     
+}
+
+/* --- About page --- */
+#about-page main > section { margin-bottom: 32px; }
+
+/* Hero */
+#about-page .about-hero {
+  border-radius: 12px;
+  background: linear-gradient(rgba(30,30,30,.85), rgba(30,30,30,.85)),
+              url('../image/Background.png') center/cover no-repeat;
+  padding: 64px 24px;
+  text-align: center;
+}
+#about-page .about-hero__content { max-width: 820px; margin: 0 auto; }
+
+/* Profile + Contributions */
+.team-profile, .member-contributions, .group-photo, .fun-facts {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+dl { margin: 0; }
+dt { font-weight: bold; color: var(--primary-color); margin-top: 12px; }
+dd { margin-left: 20px; margin-bottom: 8px; }
+
+/* Group photo */
+.group-photo figure { text-align: center; }
+.group-photo img { max-width: 100%; border-radius: 8px; }
+.group-photo figcaption { font-size: .9rem; margin-top: 8px; color: var(--light-text); }
+
+/* Fun facts table */
+.fun-facts table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+.fun-facts th, .fun-facts td {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  text-align: center;
+}
+.fun-facts th {
+  background: var(--primary-color);
+  color: #fff;
+}
+.fun-facts caption {
+  caption-side: top;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* CTA */
+.about-cta {
+  padding: 28px 20px;
+  text-align: center;
+  background: linear-gradient(90deg, rgba(51,103,214,.25), rgba(36,209,217,.25));
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
 }
