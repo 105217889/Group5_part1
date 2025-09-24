@@ -16,14 +16,6 @@
     align-items: center;
 }
 
-nav h1 {
-    flex-grow: 0; 
-}
-
-.header-link:hover {
-    text-decoration: none;
-}
-
 body {
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     margin: 0;
@@ -40,12 +32,7 @@ h1, h2, h3, h4 {
 }
 
 a {
-    color: var(--secondary-color);
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 main {
@@ -76,7 +63,7 @@ nav {
 
 nav h1 {
     font-size: 1.5em;
-    margin: 0 10px;
+    margin: 0px 10px;
     flex-grow: 1;
 }
 
@@ -117,7 +104,7 @@ footer {
     background-attachment: fixed;
 }
 
-.hero {
+.welcome {
     text-align: center;
     padding: 60px 20px;
     background-color: rgba(30, 30, 30, 0.8);
@@ -165,33 +152,17 @@ aside {
     padding: 20px;
     border: 1px solid var(--border-color);
     border-radius: 8px;
+    flex: 1; 
+    float: right; 
+    width: 25%;
+    box-sizing: border-box; 
 }
 
-
-/* --- Responsive Layout --- */
-/* For tablets and small desktops (primarily for jobs.html layout) */
-@media (min-width: 768px) {
-    .jobs-layout {
-        display: flex;
-        gap: 20px;
-    }
-
-    .job-listings {
-        flex: 3; 
-    }
-    
-    /* <aside> width requirement for larger screens */
-    aside {
-        flex: 1; 
-        float: right; 
-        width: 25%;
-        box-sizing: border-box; 
-    }
+.jobs-layout {
+    display: flex;
+    gap: 20px;
 }
 
-/* For larger desktops (minor adjustments) */
-@media (min-width: 1024px) {
-    nav h1 {
-        font-size: 2em;
-    }
+.job-listings {
+    flex: 3; 
 }
