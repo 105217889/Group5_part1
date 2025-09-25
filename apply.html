@@ -11,11 +11,15 @@
 </head>
 <body>
      <header>
-        <nav>
-            <a href="index.html" class="logo-link">
+      <nav>
+        <div class="logo-title-group">
+            <a href="index.html" class="logo-link" aria-label="Go to the homepage">
                 <img src="image/logo.png" alt="PixelForge Studios Logo" id="logo">
             </a>
-            <h1>PixelForge Studios</h1>
+            <a href="index.html" class="header-link">
+                <h1>PixelForge Studios</h1>
+            </a>
+        </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="jobs.html">Careers</a></li>
@@ -39,9 +43,10 @@
         <div>
             <label for="firstname">First Name</label>
             <input type="text" id="firstname" name="firstname" pattern="^[a-zA-Z]+$" required maxlength="20">
+            
         </div>
-            <div> 
-            <label for="lastname">Last Name</label>
+           <div> 
+            <label label for="lastname">Last Name</label>
             <input type="text" id="lastname" name="lastname" pattern="^[a-zA-Z]+$" required maxlength="20">
         </div>
         <div> 
@@ -51,7 +56,7 @@
             
         
     
-    <fieldset>
+    <fieldset class="apply-fieldset">
         <legend><h3>Gender</h3></legend>
         <p>
             <label for="g1">Male</label>
@@ -71,8 +76,8 @@
            
         
             <div> 
-                <label for="sub">Suburb/Town</label>
-            <input type="text" id="sub" name="sub" required maxlength="40">
+                <label for="suburb">Suburb/Town</label>
+            <input type="text" id="suburb" name="suburb" required maxlength="40">
             </div>
             <div> 
             <label for="state">State</label>
@@ -102,7 +107,7 @@
                 <label for="phone">Phone Number</label>
                 <input type="tel" id="phone" name="phone" pattern="^[0-9]{8,12}$" required maxlength="12">
             </div>
-            <fieldset>
+            <fieldset class="apply-fieldset">
                 <legend><h3>Skill list</h3></legend>
                 <div>
                     <label>
@@ -132,9 +137,10 @@
             <label for="otherskills">Other skills</label>
             <textarea id="otherskills" name="otherskills" rows="4" cols="50"></textarea>
              </div>
-  
-<button type="submit" class="apply-button">Submit Application</button>
-<button type="reset" class="apply-button">Reset Application</button>
+  <div> 
+<button type="submit" class="submit-but">Submit Application</button>
+<button type="reset" class="reset-but">Reset Application</button>
+</div>
 </form>
 </div>
 <div class="sidebar2"></div>

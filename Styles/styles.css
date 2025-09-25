@@ -1,13 +1,19 @@
 /* --- Global Styles --- */
 /* Applies to all html pages to maintain consistency */
-:root { /*Color code taken from https://htmlcolorcodes.com*/
-    --primary-color: #764AF1; 
-    --secondary-color: #9772FB;
+/*All Color code taken from https://htmlcolorcodes.com*/
+:root {
+    --primary-color: #57a8f5; 
+    --secondary-color: #24d1d9;
     --dark-bg: #1E1E1E;
     --light-text: #F0F0F0;
     --dark-text: #333333;
     --card-bg: #2C2C2C;
     --border-color: #444444;
+}
+
+.logo-title-group {
+    display: flex;
+    align-items: center;
 }
 
 body {
@@ -16,6 +22,9 @@ body {
     background-color: var(--dark-bg);
     color: var(--light-text);
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2, h3, h4 {
@@ -23,18 +32,15 @@ h1, h2, h3, h4 {
 }
 
 a {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 main {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    flex-grow: 1;
 }
 
 /* --- Header and Navigation (Shared for all) --- */
@@ -99,7 +105,7 @@ footer {
     background-attachment: fixed;
 }
 
-.hero {
+.welcome {
     text-align: center;
     padding: 60px 20px;
     background-color: rgba(30, 30, 30, 0.8);
@@ -109,7 +115,7 @@ footer {
 
 .cta-button {
     display: inline-block;
-    background-color: var(--primary-color);
+    background-color: #3367D6;
     color: white;
     padding: 12px 25px;
     border-radius: 5px;
@@ -134,7 +140,7 @@ footer {
 
 .apply-button {
     display: inline-block;
-    background-color: var(--secondary-color);
+    background-color: #3367D6;
     color: white;
     padding: 8px 15px;
     border-radius: 5px;
@@ -149,9 +155,6 @@ aside {
     border-radius: 8px;
 }
 
-
-/* --- Responsive Layout --- */
-/* For tablets and small desktops (primarily for jobs.html layout) */
 @media (min-width: 768px) {
     .jobs-layout {
         display: flex;
@@ -162,7 +165,6 @@ aside {
         flex: 3; 
     }
     
-    /* <aside> width requirement for larger screens */
     aside {
         flex: 1; 
         float: right; 
@@ -171,26 +173,26 @@ aside {
     }
 }
 
-/* For larger desktops (minor adjustments) */
 @media (min-width: 1024px) {
     nav h1 {
         font-size: 2em;
     }
 }
 
-
-
- 
+/* apply.html specific */
 .apply-center{
     width: 60%;
     display: flex;
     justify-content: center;
     padding: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    border-color: var(--primary-color);
 
 }
+
 .main-container {
-    display: flex;
-    min-height: 100vh;
+    display: flex; 
 }
 .sidebar1 {
     width: 30%;
@@ -207,7 +209,67 @@ aside {
     flex-direction: column;
     margin-bottom: 15px;
     max-width: 300px;
+    margin-bottom: 20px;
 }
+.apply-center input, .apply-center select {
+    padding: 16px 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--light-text);
+    width: 100%;
+    max-width: 300px;
+    min-height: 10px;
+}
+.apply-center select option {
+    background-color: #2C2C2C;
+    color: #F0F0F0;
+}
+.apply-center input:hover, .apply-center select:hover, .apply-center textarea:hover {
+    border-color: var(--primary-color);
+}
+.apply-center input:focus,
+.apply-center select:focus{
+    border-color: var(--primary-color);
+background-color: #2C3E50;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(118, 74, 241, 0.2);}
+.apply-center input[type="radio"], .apply-center input[type="checkbox"] {
+    width: auto;
+    padding: 0;
+    margin-right: 8px;
+}
+.apply-fieldset{
+     border-color: var(--primary-color);
+     width: 325px;
+}
+.apply-center label{
+    font-size: 15px;            
+    margin-bottom: 6px;
+    color: var(--light-text);
+}
+
+.reset-but {
+    display: inline-block;
+    background-color: #3367D6;
+    color: white;
+    padding: 15px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+     
+}
+.submit-but {
+    display: inline-block;
+    background-color: #3367D6;
+    color: white;
+    padding: 15px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+     
+}
+
 /* --- About page --- */
 #about-page main > section { margin-bottom: 32px; }
 
@@ -250,7 +312,7 @@ dd { margin-left: 20px; margin-bottom: 8px; }
   text-align: center;
 }
 .fun-facts th {
-  background: var(--primary-color);
+  background: #3367D6;
   color: #fff;
 }
 .fun-facts caption {
