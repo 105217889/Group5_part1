@@ -373,4 +373,39 @@ background-color: #2C3E50;
 }
 .cta-button:hover{ filter: brightness(1.06); }
 .cta-button:focus{ outline: 2px solid rgba(255,255,255,.35); outline-offset: 2px; }
+/* Fix: keep contributions list in one column so dt+dd stay together */
+.member-contributions .contrib-list{
+  display:block;           /* override previous grid/columns */
+  column-count:1;          /* ensure single column everywhere */
+  column-gap:0;
+}
+.member-contributions .contrib-list dt{
+  margin-top:14px;
+  font-weight:700;
+  color:var(--primary-color);
+}
+.member-contributions .contrib-list dd{
+  margin:4px 0 8px 18px;
+  color:var(--light-text);
+}
+
+/* Optional: if you still want two columns, only do it when wrapped content fits.
+   Comment out the block above and use this safer version.
+*/
+/*
+@media (min-width:1200px){
+  .member-contributions .contrib-list{
+    column-count:2;
+    column-gap:32px;
+  }
+  .member-contributions .contrib-list dt,
+  .member-contributions .contrib-list dd{ break-inside:avoid; }
+}
+*/
+
+/* Compact the 3-column Fun Facts table */
+.fun-facts th, .fun-facts td{ padding:10px; }
+@media (min-width:900px){
+  .fun-facts table{ max-width:900px; margin:12px auto; } /* center + readable width */
+}
 
