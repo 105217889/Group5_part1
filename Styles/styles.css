@@ -221,7 +221,7 @@ aside {
 .apply-center input:focus,
 .apply-center select:focus{
     border-color: var(--primary-color);
-background-color: rgba(118, 74, 241, 0.1);
+background-color: #2C3E50;
     outline: none;
     box-shadow: 0 0 0 3px rgba(118, 74, 241, 0.2);}
 .apply-center input[type="radio"], .apply-center input[type="checkbox"] {
