@@ -153,19 +153,30 @@ aside {
     padding: 20px;
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    flex: 1; 
-    float: right; 
-    width: 25%;
-    box-sizing: border-box; 
 }
 
-.jobs-layout {
-    display: flex;
-    gap: 20px;
+@media (min-width: 768px) {
+    .jobs-layout {
+        display: flex;
+        gap: 20px;
+    }
+
+    .job-listings {
+        flex: 3; 
+    }
+    
+    aside {
+        flex: 1; 
+        float: right; 
+        width: 25%;
+        box-sizing: border-box; 
+    }
 }
 
-.job-listings {
-    flex: 3; 
+@media (min-width: 1024px) {
+    nav h1 {
+        font-size: 2em;
+    }
 }
 
 /* apply.html specific */
