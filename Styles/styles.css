@@ -1,6 +1,7 @@
 /* --- Global Styles --- */
 /* Applies to all html pages to maintain consistency */
-/*All Color code taken from https://htmlcolorcodes.com*/
+/*All Color code taken from https://htmlcolorcodes.com 
+Color scheme decision was made with help from Claude, so that it will have good contrast and fit the background image*/
 :root {
     --primary-color: #57a8f5; 
     --secondary-color: #24d1d9;
